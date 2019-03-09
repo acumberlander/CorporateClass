@@ -62,30 +62,27 @@ namespace CorporateClass
         Employee owner = new Employee("Zachery Cumberlander", "CEO", DateTime.Parse("11/13/2013"));
         Employee developer = new Employee("Austin Cumberlander", "CTO", DateTime.Parse("02/15/2019"));
         Employee investor = new Employee("Mark Cuban", "Investor", DateTime.Parse("02/15/2019"));
-
+        
         List<Employee> GKEmployees = new List<Employee>();
         GKEmployees.Add(owner);
         GKEmployees.Add(developer);
         GKEmployees.Add(investor);
-
-        void ListEmployees()
+        
+        
+        foreach(var employee in GKEmployees)
             {
-                foreach(var employee in GKEmployees)
-                    {
-                        var Name = employee.Name;
-                        var Job = employee.JobTitle;
-                        var Start = employee.StartDate;
+                var Name = employee.Name;
+                var Job = employee.JobTitle;
+                var Start = employee.StartDate;
 
-                        Console.WriteLine(Name);
-                        Console.WriteLine(Job);
-                        Console.WriteLine(Start);
-                        Console.WriteLine("");
-                    }
-
-                ListEmployees();
-                Console.WriteLine("Hello World!");
-                Console.ReadLine();
+                Console.WriteLine(Name);
+                Console.WriteLine(Job);
+                Console.WriteLine(Start);
+                Console.WriteLine("");
             }
+
+        Console.WriteLine("Hello World!");
+        Console.ReadLine();
         }
     }
 
