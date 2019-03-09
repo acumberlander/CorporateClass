@@ -68,21 +68,24 @@ namespace CorporateClass
         GKEmployees.Add(developer);
         GKEmployees.Add(investor);
 
-        
-        foreach(var employee in GKEmployees)
+        void ListEmployees()
             {
-                var Name = employee.Name;
-                var Job = employee.JobTitle;
-                var Start = employee.StartDate;
+                foreach(var employee in GKEmployees)
+                    {
+                        var Name = employee.Name;
+                        var Job = employee.JobTitle;
+                        var Start = employee.StartDate;
 
-                Console.WriteLine(Name);
-                Console.WriteLine(Job);
-                Console.WriteLine(Start);
-                Console.WriteLine("");
+                        Console.WriteLine(Name);
+                        Console.WriteLine(Job);
+                        Console.WriteLine(Start);
+                        Console.WriteLine("");
+                    }
+
+                ListEmployees();
+                Console.WriteLine("Hello World!");
+                Console.ReadLine();
             }
-
-        Console.WriteLine("Hello World!");
-        Console.ReadLine();
         }
     }
 
